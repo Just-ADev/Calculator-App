@@ -13,6 +13,12 @@ const state = {
   isFirstDigit: true,
   isCalculatorBroken: false,
   isClearButtonClicked: false,
+  isMaxNumberLength: false,
+};
+
+const controlNumberLength = (number) => {
+  if (number.split("").length >= 8) state.isMaxNumberLength = true;
+  else state.isMaxNumberLength = false;
 };
 
 const savePreviousNumber = (number) => {
@@ -73,6 +79,7 @@ const changeToFloatNumber = () => (state.isFloatingNumber = true);
 const firstDigitWasEntered = () => (state.isFirstDigit = false);
 const fixCalculator = () => (state.isCalculatorBroken = false);
 const clearButtonWasClicked = () => (state.isClearButtonClicked = true);
+const resetClearButtonWasClicked = () => (state.isClearButtonClicked = false);
 //--------------------
 // VIEW
 //--------------------
@@ -140,7 +147,17 @@ const changeNumberSign = () => {
 
 nodes.digits.forEach((digit) =>
   digit.addEventListener("click", (e) => {
-    if (state.isResultActive || state.isCalculatorBroken) return;
+    controlNumberLength(nodes.result.innerText);
+
+    if (
+      state.isMaxNumberLength ||
+      state.isResultActive ||
+      state.isCalculatorBroken
+    )
+      return;
+
+    changeToClearButton();
+    resetClearButtonWasClicked();
     displayDigit(e.target.innerText);
     firstDigitWasEntered();
   })
