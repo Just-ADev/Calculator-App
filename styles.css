@@ -103,7 +103,7 @@ html {
 
   background: #333744;
 
-  border-radius: 2rem;
+  border-radius: 20rem;
 
   font-size: 4rem;
 
@@ -124,7 +124,7 @@ html {
 }
 
 .calculator__operators {
-  border-radius: 2rem;
+  border-radius: 20rem;
 
   grid-column: 4 / 6;
   grid-row: 2 / 4;
@@ -133,7 +133,7 @@ html {
   overflow: hidden;
 
   box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.5);
-  border: 2rem solid #333744;
+  border: 1rem solid #333744;
 }
 
 .calculator__symbol {
@@ -167,6 +167,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  pointer-events: none;
 }
 
 .calculator__symbol--plus {

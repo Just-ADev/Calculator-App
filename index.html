@@ -22,39 +22,53 @@
           <div class="calculator__result">0</div>
         </section>
         <section class="calculator__keyboard">
-          <div class="calculator__button">7</div>
-          <div class="calculator__button">8</div>
-          <div class="calculator__button">9</div>
-          <div class="calculator__button">
+          <div class="calculator__button calculator__digit">7</div>
+          <div class="calculator__button calculator__digit">8</div>
+          <div class="calculator__button calculator__digit">9</div>
+          <div class="calculator__button calculator__clear-digit">
             <i class="fas fa-arrow-left"></i>
           </div>
-          <div class="calculator__button">C</div>
-          <div class="calculator__button">4</div>
-          <div class="calculator__button">5</div>
-          <div class="calculator__button">6</div>
+          <div class="calculator__button calculator__clear-number">C</div>
+          <div class="calculator__button calculator__digit">4</div>
+          <div class="calculator__button calculator__digit">5</div>
+          <div class="calculator__button calculator__digit">6</div>
 
           <div class="calculator__operators">
-            <div class="calculator__symbol calculator__symbol--plus">
+            <div
+              class="calculator__operator calculator__symbol calculator__symbol--plus"
+              data-symbol="+"
+            >
               <i class="fas fa-plus"></i>
             </div>
-            <div class="calculator__symbol calculator__symbol--divide">
+            <div
+              class="calculator__operator calculator__symbol calculator__symbol--divide"
+              data-symbol="/"
+            >
               <i class="fas fa-divide"></i>
             </div>
-            <div class="calculator__symbol calculator__symbol--minus">
+            <div
+              class="calculator__operator calculator__symbol calculator__symbol--minus"
+              data-symbol="-"
+            >
               <i class="fas fa-minus"></i>
             </div>
-            <div class="calculator__symbol calculator__symbol--multiply">
+            <div
+              class="calculator__operator calculator__symbol calculator__symbol--multiply"
+              data-symbol="*"
+            >
               <i class="fas fa-times"></i>
             </div>
           </div>
 
-          <div class="calculator__button">1</div>
-          <div class="calculator__button">2</div>
-          <div class="calculator__button">3</div>
-          <div class="calculator__button">0</div>
-          <div class="calculator__button">,</div>
-          <div class="calculator__button">+/-</div>
-          <div class="calculator__button"><i class="fas fa-equals"></i></div>
+          <div class="calculator__button calculator__digit">1</div>
+          <div class="calculator__button calculator__digit">2</div>
+          <div class="calculator__button calculator__digit">3</div>
+          <div class="calculator__button calculator__digit">0</div>
+          <div class="calculator__button calculator__dot">.</div>
+          <div class="calculator__button calculator__sign">+/-</div>
+          <div class="calculator__button calculator__calculate">
+            <i class="fas fa-equals"></i>
+          </div>
         </section>
       </article>
     </main>
