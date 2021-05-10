@@ -114,7 +114,7 @@ const clearDigit = () => {
 const clearAllDigits = () => (nodes.result.innerText = 0);
 
 const displayResult = (result) =>
-  (nodes.result.innerText = result.toPrecision(4));
+  (nodes.result.innerText = parseFloat(result.toFixed(4).toString()));
 
 const displayOperation = (previousNumber, operator, currentNumber) => {
   nodes.operation.innerText = `${previousNumber} ${operator}`;
