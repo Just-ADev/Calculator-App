@@ -113,8 +113,13 @@ const clearDigit = () => {
 
 const clearAllDigits = () => (nodes.result.innerText = 0);
 
-const displayResult = (result) =>
-  (nodes.result.innerText = parseFloat(result.toFixed(4).toString()));
+const displayResult = (result) => {
+  if (typeof result === "string") {
+    nodes.result.innerText = result;
+  } else {
+    nodes.result.innerText = parseFloat(result.toFixed(4));
+  }
+};
 
 const displayOperation = (previousNumber, operator, currentNumber) => {
   nodes.operation.innerText = `${previousNumber} ${operator}`;
