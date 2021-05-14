@@ -80,6 +80,7 @@ const firstDigitWasEntered = () => (state.isFirstDigit = false);
 const fixCalculator = () => (state.isCalculatorBroken = false);
 const clearButtonWasClicked = () => (state.isClearButtonClicked = true);
 const resetClearButtonWasClicked = () => (state.isClearButtonClicked = false);
+
 //--------------------
 // VIEW
 //--------------------
